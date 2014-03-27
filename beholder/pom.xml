@@ -1,0 +1,99 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>br.ufmg.dcc.saotome</groupId>
+	<artifactId>beholder</artifactId>
+	<version>1.1.0</version>
+	<name>Beholder Automatizated Testing Framework</name>
+	<description>Framework with Interfaces creating a standard of Components to create Test Cases.</description>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<scm>
+		<tag>HEAD</tag>
+		<connection>scm:svn:svn+ssh://hudson:1nt3gr4c40@svn.saotome.dcc.ufmg.br/svn/testessaotome/beholder/trunk</connection>
+		<developerConnection>scm:svn:svn+ssh://hudson:1nt3gr4c40@svn.saotome.dcc.ufmg.br/svn/testessaotome/beholder/trunk</developerConnection>
+		<url>http://redmine.saotome.dcc.ufmg.br/projects/testessaotome/repository/show/beholder/trunk</url>
+	</scm>
+	<issueManagement>
+		<system>Redmine</system>
+		<url>http://redmine.saotome.dcc.ufmg.br/projects/testessaotome/issues</url>
+	</issueManagement>
+	<ciManagement>
+		<system>Hudson</system>
+		<url>http://qualidade:8080/hudson</url>
+	</ciManagement>
+	<organization>
+		<name>Equipe São Tomé DCC</name>
+		<url>http://www.saotome.dcc.ufmg.br</url>
+	</organization>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.5.1</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.12.1</version>
+				<configuration>
+					<skipTests>true</skipTests>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.2</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.9</version>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>internal</id>
+			<url>http://150.164.2.218:8081/archiva/repository/internal/</url>
+		</repository>
+	</distributionManagement>
+
+	<repositories>
+		<repository>
+			<id>internal</id>
+			<name>Archiva Managed Internal Repository</name>
+			<url>http://150.164.2.218:8081/archiva/repository/internal/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+	<url>http://redmine.saotome.dcc.ufmg.br/projects/testessaotome/wiki</url>
+</project>
