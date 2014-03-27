@@ -1,0 +1,14 @@
+Versão 1.2 - Versão em Desenvolvimento
+Re-estruturar o TextField e o Button de forma a ser dividido entre Button, Input e Img.
+Definir a ideia de painéis e agregações.
+Re-estruturação do iFrame para comportar a nova ideia de painéis.
+Criação de utilitários para leitura de arquivos CSV para o datasource
+
+Versão 1.1 - Versão Estável
+Definição da interface de Div;
+definição da nova estrutura para chamadas do iFrame no sistema;
+
+Versão 1.0 - Versões Anteriores
+Definição das interfaces para os casos de teste;
+definição da estrutura básica de execução;
+definição da forma de expansão do sistema.
