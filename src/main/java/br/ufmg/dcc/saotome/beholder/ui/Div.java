@@ -27,6 +27,10 @@ import br.ufmg.dcc.saotome.beholder.ui.event.Clickable;
  */
 public interface Div extends Component, Clickable {
 	
+	/**
+	 * Get the text inside of the div
+	 * @return Returns the text
+	 */
 	String getText();
 
 }

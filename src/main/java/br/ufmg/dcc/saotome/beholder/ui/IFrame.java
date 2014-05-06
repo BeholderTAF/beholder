@@ -24,17 +24,21 @@ package br.ufmg.dcc.saotome.beholder.ui;
  * The tester must implement a class with the components of the modal and
  * instantiate a Modal generic implementation, passing the Test Interface
  * created as a class parameter.
+ * The interface set and get in this class can be any class that you want
+ * encapsule inside of a IFrame to represent a screen loaded inside of an 
+ * Iframe.
  * @author icaroclever
  */
 public interface IFrame extends Component, ComponentAgregator{
 	
 	/**
-	 * TODO DOCUMENT
+	 * Getter to the interface.
+	 * @return Returs the interface class informed.
 	 */
 	<T> T getInterface();
 	
 	/**
-	 * TODO Document
+	 * Setter to the interface
 	 * @param testInterface
 	 */
 	<T> void setInterface(T testInterface);

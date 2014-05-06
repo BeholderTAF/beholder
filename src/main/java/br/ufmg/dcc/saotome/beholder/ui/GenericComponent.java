@@ -22,7 +22,8 @@ package br.ufmg.dcc.saotome.beholder.ui;
 import br.ufmg.dcc.saotome.beholder.ui.event.Clickable;
 
 /**
- * TODO DOCUMENT
+ * This generic class represent any HTML element not mapped by Beholder. If this class is called to
+ * instance a mapped HTML element, an Exception MUST BE involked.
  * @author icaroclever
  *
  */

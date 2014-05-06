@@ -73,7 +73,7 @@ public interface Component extends Displayable{
     void loadByAttribute(String tagName, String attributeName,String value);
     
     /** Recover the attribute of HTML component.
-     * @return attribute value
+     * @return attribute value if the attribute is found in html tag. Otherwise returns null.
      */
     String getAttribute(String attribute);
     

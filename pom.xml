@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>br.ufmg.dcc.saotome</groupId>
 	<artifactId>beholder</artifactId>
-	<version>1.1.0</version>
+	<version>1.1.1</version>
 	<name>Beholder Testing Automated Framework</name>
 	<description>Framework with Interfaces creating a standard of Components to create Test Cases.</description>
 	<properties>
