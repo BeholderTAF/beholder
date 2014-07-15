@@ -44,6 +44,24 @@ public interface Component extends Displayable{
      */
     void setId(String value);
 
+    /** Load the interface element using the attribute <b>xpath</b>
+     * as the unique identifier, overwriting the old object by the
+     * new one loaded.
+     * @param value the attribute id value
+     */
+    void loadByXPath(String value);
+    
+    /** Recover the value present in the interface of <b>xpath</b> attribute.
+     * @return attribute xpath value
+     */
+    String getXPath();
+    
+    
+    /** Set the attribute <b>xpath</b> of the component class.
+     * @param value attribute id value
+     */
+    void setXPath(String value);
+    
     /** Load the interface element using the attribute <b>name</b>
      * as the unique identifier, overwriting the old object by the
      * new one loaded.
