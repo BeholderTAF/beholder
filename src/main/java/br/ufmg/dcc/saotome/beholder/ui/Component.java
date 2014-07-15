@@ -52,7 +52,7 @@ public interface Component extends Displayable{
     void loadByXPath(String value);
     
     /** Recover the value present in the interface of <b>xpath</b> attribute.
-     * @return attribute xpath value
+     * @return attribute xpath value.
      */
     String getXPath();
     
