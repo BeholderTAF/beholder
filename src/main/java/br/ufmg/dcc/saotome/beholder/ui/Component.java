@@ -35,12 +35,12 @@ public interface Component extends Displayable{
     void loadById(String value);
 
    /** Recover the value present in the interface of <b>id</b> attribute.
-     * @return attribute id value
+     * @return attribute id value.
      */
     String getId();
     
     /** Set the attribute <b>id</b> of the component class.
-     * @param value attribute id value
+     * @param value attribute id value.
      */
     void setId(String value);
 
