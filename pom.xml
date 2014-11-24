@@ -1,22 +1,67 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>br.ufmg.dcc.saotome</groupId>
 	<artifactId>beholder</artifactId>
-	<version>1.1.1</version>
+	<version>1.1.1-SNAPSHOT</version>
+	
 	<name>Beholder Testing Automated Framework</name>
 	<description>Framework with Interfaces creating a standard of Components to create Test Cases.</description>
+	<url>https://github.com/BeholderTAF/beholder/wiki</url>
+	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+	
 	<issueManagement>
 		<system>GitHub</system>
 		<url>https://github.com/BeholderTAF/beholder/issues</url>
 	</issueManagement>
+	
 	<organization>
 		<name>BeholderTAF</name>
 		<url>https://github.com/BeholderTAF</url>
 	</organization>
+	<licenses>
+	    <license>
+	        <name>Apache License, Version 2.0</name>
+	        <url> http://www.apache.org/licenses/LICENSE-2.0</url>
+	    </license>
+	</licenses>
+	
+	<scm>
+		<url>https://github.com/BeholderTAF/beholder.git</url>
+		<connection>scm:git:https://github.com/BeholderTAF/beholder.git</connection>
+		<developerConnection>scm:git:git@github.com:BeholderTAF/beholder.git</developerConnection>
+	  <tag>HEAD</tag>
+  </scm>
+	
+	<developers>
+		<developer>
+			<id>icaroclever</id>
+			<name>Ícaro Clever da Fonseca Braga</name>
+			<email>icaroclever@yahoo.com.br</email>
+			<roles>
+				<role>architect</role>
+				<role>developer</role>
+			</roles>
+			<timezone>-3</timezone>
+		</developer>
+	</developers>
+	
+	<distributionManagement>
+		<snapshotRepository>
+			<id>sonatype-nexus-snapshots</id>
+			<name>Sonatype OSS Snapshot Repository</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+		
+		<repository>
+			<id>sonatype-nexus-staging</id>
+			<name>Sonatype OSS Staging Repository</name>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+		</repository>
+	</distributionManagement>
+	
 	<build>
 		<plugins>
 			<plugin>
@@ -64,6 +109,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-	<url>https://github.com/BeholderTAF/beholder/wiki</url>
 </project>
