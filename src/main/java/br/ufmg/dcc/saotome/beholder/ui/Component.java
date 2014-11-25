@@ -19,6 +19,8 @@
  */
 package br.ufmg.dcc.saotome.beholder.ui;
 
+import java.util.List;
+
 import br.ufmg.dcc.saotome.beholder.ui.event.Displayable;
 
 /** Interface with the common attributes and events usually found in HTML 
@@ -35,15 +37,33 @@ public interface Component extends Displayable{
     void loadById(String value);
 
    /** Recover the value present in the interface of <b>id</b> attribute.
-     * @return attribute id value
+     * @return attribute id value.
      */
     String getId();
     
     /** Set the attribute <b>id</b> of the component class.
-     * @param value attribute id value
+     * @param value attribute id value.
      */
     void setId(String value);
 
+    /** Load the interface element using the attribute <b>xpath</b>
+     * as the unique identifier, overwriting the old object by the
+     * new one loaded.
+     * @param value the attribute id value
+     */
+    void loadByXPath(String value);
+    
+    /** Recover the value present in the interface of <b>xpath</b> attribute.
+     * @return attribute xpath value.
+     */
+    String getXPath();
+    
+    
+    /** Set the attribute <b>xpath</b> of the component class.
+     * @param value attribute id value
+     */
+    void setXPath(String value);
+    
     /** Load the interface element using the attribute <b>name</b>
      * as the unique identifier, overwriting the old object by the
      * new one loaded.
@@ -81,4 +101,33 @@ public interface Component extends Displayable{
      * @param value attribute value
      */
     void setAttribute(String attribute,String value);
+    
+    
+   
+    /**
+     * 
+     * Load one list of the components with  same tag, attribute and value.
+     * This method is similar to the method loadByAttribute(String tagName, String attributeName,String value);
+     * however, this return one list of all components which contains the same value of attribute and are into same tag type
+     * E.g: 
+     * 
+     * <div id ="idDiv">
+     * 	<button class="classButton">
+     *  <button class="classButton">
+     * </div> 
+     *  
+     *  List<Button> buttons = loadByAttribute(SeleniumButton.class,"idDiv","button","class", "classButton")
+     *  
+     *  
+     * @param type: type of the  instance of component  which will instantiate. 
+     * @param IdFather: id of the tag which contains the  components sons, whether this attribute is null 
+     * will be considered all elements in  HTML which contains the same tagName, attribute and value.  
+     * @param tagName: name of the tag of the components sons 
+     * @param attributeName: attribute of components sons 
+     * @param value : value of attribute 
+     * @return List of  components which contains the same value of attribute and are into tag type
+     */
+    public <T extends Component, Y extends T> List<T> loadByAttribute(Class<Y> type, final String IdFather, final String tagName, 
+			final String attributeName, final String value);
+    
 }
