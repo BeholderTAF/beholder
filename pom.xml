@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>br.ufmg.dcc.saotome</groupId>
 	<artifactId>beholder</artifactId>
-	<version>1.1.1</version>
+	<version>1.1.1-SNAPSHOT</version>
 
 	<name>Beholder Testing Automated Framework</name>
 	<description>Framework with Interfaces creating a standard of Components to create Test Cases.</description>
@@ -32,7 +32,7 @@
 		<url>https://github.com/BeholderTAF/beholder.git</url>
 		<connection>scm:git:https://github.com/BeholderTAF/beholder.git</connection>
 		<developerConnection>scm:git:git@github.com:BeholderTAF/beholder.git</developerConnection>
-		<tag>1.1.1</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 	<developers>
